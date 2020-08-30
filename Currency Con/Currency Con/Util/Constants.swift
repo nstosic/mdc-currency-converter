@@ -12,7 +12,7 @@ import CoreGraphics
 class Constants {
     static let appTitle = "Currency Con"
     static let baseUrl = "http://api.currencylayer.com/"
-    static let apiKey = "a2d0a9f94132485657c6f885159d7f4d"
+    static let apiKey = "cbdf0a41102114a5354a817f1f0a06b4"
     static let timeBeforeExpiryInSeconds = 30.0 * 60.0
 }
 

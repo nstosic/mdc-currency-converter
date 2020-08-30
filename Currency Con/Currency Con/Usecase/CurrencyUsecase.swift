@@ -41,8 +41,8 @@ class CurrencyUsecaseImpl : CurrencyUsecase {
         return fetchAvailableCurrenciesFromStorage().ifEmpty(switchTo: fetchAvailableCurrenciesFromApi())
     }
     
-    private func fetchQuotesFromApi(_ currency: Currency) -> Observable<[Quote]> {
-        return api.getCurrencyQuotes(currency.isoCode)
+    private func fetchQuotesFromApi() -> Observable<[Quote]> {
+        return api.getCurrencyQuotes()
             .map { [unowned self] (quotesResponse) -> [Quote] in
                 var quotes = [Quote]()
                 quotesResponse.quotes.forEach { (conversion, rate) in
@@ -55,9 +55,9 @@ class CurrencyUsecaseImpl : CurrencyUsecase {
         }
     }
     
-    private func fetchQuotesFromStorage(_ currency: Currency) -> Observable<[Quote]> {
+    private func fetchQuotesFromStorage() -> Observable<[Quote]> {
         do {
-            if let quotes = try storage.fetchQuotes(currency.isoCode, force: false) {
+            if let quotes = try storage.fetchQuotes("USD", force: false) {
                 return Observable.just(quotes)
             }
         } catch is CacheDataExpiredException {
@@ -69,6 +69,15 @@ class CurrencyUsecaseImpl : CurrencyUsecase {
     }
     
     func fetchQuotes(_ currency: Currency) -> Observable<[Quote]> {
-        return fetchQuotesFromStorage(currency).ifEmpty(switchTo: fetchQuotesFromApi(currency))
+        return fetchQuotesFromStorage().ifEmpty(switchTo: fetchQuotesFromApi()).map { (usdQuotes) -> [Quote] in
+            var quotes = [Quote]()
+            if let baseQuote = usdQuotes.first(where: { $0.to == currency }) {
+                usdQuotes.forEach { (quote) in
+                    let adjustedQuote = Quote(from: currency, to: quote.to, rate: quote.rate / baseQuote.rate)
+                    quotes.append(adjustedQuote)
+                }
+            }
+            return quotes
+        }
     }
 }

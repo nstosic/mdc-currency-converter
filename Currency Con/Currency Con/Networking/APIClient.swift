@@ -12,7 +12,7 @@ import Resolver
 
 protocol APIClient {
     func getSupportedCurrencies() -> Observable<SupportedCurrenciesResponse>
-    func getCurrencyQuotes(_ currency: String) -> Observable<QuotesResponse>
+    func getCurrencyQuotes() -> Observable<QuotesResponse>
 }
 
 class APIClientImpl : APIClient {
@@ -22,7 +22,7 @@ class APIClientImpl : APIClient {
         return networkingClient.request(url: APIRoutes.list, method: .get, parameters: nil, headers: nil)
     }
     
-    func getCurrencyQuotes(_ currency: String) -> Observable<QuotesResponse> {
+    func getCurrencyQuotes() -> Observable<QuotesResponse> {
         return networkingClient.request(url: APIRoutes.live, method: .get, parameters: nil, headers: nil)
     }
 }

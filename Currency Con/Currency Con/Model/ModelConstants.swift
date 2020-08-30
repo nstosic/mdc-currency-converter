@@ -10,4 +10,6 @@ import Foundation
 
 class ModelConstants {
     static let apiKey = "access_key"
+    static let currencies = "currencies"
+    static let source = "source"
 }
