@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Currency Con
+
+  Created by Nemanja Stosic on 29/08/2020.
+  Copyright © 2020 No Scope Code. All rights reserved.
+*/
+
+"selectFromCurrency" = "Select currency";
+"quotes" = "Available quotes";
+"error" = "Error encountered";
+"loadCurrenciesFailed" = "We were unable to fetch the currencies. Perhaps monthly limit for free account has been reached.";
+"loadQuotesFailed" = "We were unable to fetch the quotes. Perhaps monthly limit for free account has been reached.";

@@ -1,0 +1,43 @@
+PODS:
+  - Alamofire (5.2.2)
+  - Cuckoo (1.4.1):
+    - Cuckoo/Swift (= 1.4.1)
+  - Cuckoo/Swift (1.4.1)
+  - Resolver (1.1.4)
+  - RxAlamofire (5.6.0):
+    - RxAlamofire/Core (= 5.6.0)
+  - RxAlamofire/Core (5.6.0):
+    - Alamofire (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Cuckoo
+  - Resolver
+  - RxAlamofire
+  - RxBlocking
+  - RxSwift
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Cuckoo
+    - Resolver
+    - RxAlamofire
+    - RxBlocking
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Cuckoo: 4625f7f54d9bb880123270e8969898d6c1d036b5
+  Resolver: 1f4c046255cbadfa97094692e16e940d4329779f
+  RxAlamofire: f34ddbab56fa2a36f99737f4d4ecc22288a1384f
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+
+PODFILE CHECKSUM: 7fa57396cd407666f2c56aba2b470049338dc59d
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+target 'Currency Con' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Currency Con
+  pod 'Alamofire'
+  pod 'RxSwift'
+  pod 'RxAlamofire'
+  pod 'Resolver'
+
+  target 'Currency ConTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'Cuckoo'
+    pod 'RxBlocking'
+  end
+
+  target 'Currency ConUITests' do
+    # Pods for testing
+  end
+
+end
