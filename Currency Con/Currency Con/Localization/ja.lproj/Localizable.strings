@@ -7,6 +7,7 @@
 */
 
 "selectFromCurrency" = "通貨を選択";
+"amount" = "変換する金額を入力してください";
 "quotes" = "現在のレート";
 "error" = "問題";
 "loadCurrenciesFailed" = "通貨を取得できませんでした。 たぶん、無料アカウントの毎月の制限に達しています。";

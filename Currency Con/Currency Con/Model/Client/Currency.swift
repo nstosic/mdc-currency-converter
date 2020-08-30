@@ -37,6 +37,6 @@ class Currency: BaseModel, Equatable {
     }
     
     static func == (lhs: Currency, rhs: Currency) -> Bool {
-        return lhs.isoCode == rhs.isoCode && lhs.name == rhs.name
+        return lhs.isoCode == rhs.isoCode
     }
 }
