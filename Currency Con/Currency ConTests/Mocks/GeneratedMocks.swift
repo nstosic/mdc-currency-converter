@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Currency Con/Networking/APIClient.swift at 2020-08-30 17:10:18 +0000
+// MARK: - Mocks generated from file: Currency Con/Networking/APIClient.swift at 2020-08-30 19:40:41 +0000
 
 //
 //  APIClient.swift
@@ -56,16 +56,16 @@ import RxSwift
     
     
     
-     func getCurrencyQuotes(_ currency: String) -> Observable<QuotesResponse> {
+     func getCurrencyQuotes() -> Observable<QuotesResponse> {
         
-    return cuckoo_manager.call("getCurrencyQuotes(_: String) -> Observable<QuotesResponse>",
-            parameters: (currency),
-            escapingParameters: (currency),
+    return cuckoo_manager.call("getCurrencyQuotes() -> Observable<QuotesResponse>",
+            parameters: (),
+            escapingParameters: (),
             superclassCall:
                 
                 Cuckoo.MockManager.crashOnProtocolSuperclassCall()
                 ,
-            defaultCall: __defaultImplStub!.getCurrencyQuotes(currency))
+            defaultCall: __defaultImplStub!.getCurrencyQuotes())
         
     }
     
@@ -83,9 +83,9 @@ import RxSwift
 	        return .init(stub: cuckoo_manager.createStub(for: MockAPIClient.self, method: "getSupportedCurrencies() -> Observable<SupportedCurrenciesResponse>", parameterMatchers: matchers))
 	    }
 	    
-	    func getCurrencyQuotes<M1: Cuckoo.Matchable>(_ currency: M1) -> Cuckoo.ProtocolStubFunction<(String), Observable<QuotesResponse>> where M1.MatchedType == String {
-	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: currency) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockAPIClient.self, method: "getCurrencyQuotes(_: String) -> Observable<QuotesResponse>", parameterMatchers: matchers))
+	    func getCurrencyQuotes() -> Cuckoo.ProtocolStubFunction<(), Observable<QuotesResponse>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return .init(stub: cuckoo_manager.createStub(for: MockAPIClient.self, method: "getCurrencyQuotes() -> Observable<QuotesResponse>", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -111,9 +111,9 @@ import RxSwift
 	    }
 	    
 	    @discardableResult
-	    func getCurrencyQuotes<M1: Cuckoo.Matchable>(_ currency: M1) -> Cuckoo.__DoNotUse<(String), Observable<QuotesResponse>> where M1.MatchedType == String {
-	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: currency) { $0 }]
-	        return cuckoo_manager.verify("getCurrencyQuotes(_: String) -> Observable<QuotesResponse>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func getCurrencyQuotes() -> Cuckoo.__DoNotUse<(), Observable<QuotesResponse>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return cuckoo_manager.verify("getCurrencyQuotes() -> Observable<QuotesResponse>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -129,7 +129,7 @@ import RxSwift
         return DefaultValueRegistry.defaultValue(for: (Observable<SupportedCurrenciesResponse>).self)
     }
     
-     func getCurrencyQuotes(_ currency: String) -> Observable<QuotesResponse>  {
+     func getCurrencyQuotes() -> Observable<QuotesResponse>  {
         return DefaultValueRegistry.defaultValue(for: (Observable<QuotesResponse>).self)
     }
     
@@ -201,16 +201,16 @@ import RxSwift
     
     
     
-     override func getCurrencyQuotes(_ currency: String) -> Observable<QuotesResponse> {
+     override func getCurrencyQuotes() -> Observable<QuotesResponse> {
         
-    return cuckoo_manager.call("getCurrencyQuotes(_: String) -> Observable<QuotesResponse>",
-            parameters: (currency),
-            escapingParameters: (currency),
+    return cuckoo_manager.call("getCurrencyQuotes() -> Observable<QuotesResponse>",
+            parameters: (),
+            escapingParameters: (),
             superclassCall:
                 
-                super.getCurrencyQuotes(currency)
+                super.getCurrencyQuotes()
                 ,
-            defaultCall: __defaultImplStub!.getCurrencyQuotes(currency))
+            defaultCall: __defaultImplStub!.getCurrencyQuotes())
         
     }
     
@@ -233,9 +233,9 @@ import RxSwift
 	        return .init(stub: cuckoo_manager.createStub(for: MockAPIClientImpl.self, method: "getSupportedCurrencies() -> Observable<SupportedCurrenciesResponse>", parameterMatchers: matchers))
 	    }
 	    
-	    func getCurrencyQuotes<M1: Cuckoo.Matchable>(_ currency: M1) -> Cuckoo.ClassStubFunction<(String), Observable<QuotesResponse>> where M1.MatchedType == String {
-	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: currency) { $0 }]
-	        return .init(stub: cuckoo_manager.createStub(for: MockAPIClientImpl.self, method: "getCurrencyQuotes(_: String) -> Observable<QuotesResponse>", parameterMatchers: matchers))
+	    func getCurrencyQuotes() -> Cuckoo.ClassStubFunction<(), Observable<QuotesResponse>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return .init(stub: cuckoo_manager.createStub(for: MockAPIClientImpl.self, method: "getCurrencyQuotes() -> Observable<QuotesResponse>", parameterMatchers: matchers))
 	    }
 	    
 	}
@@ -266,9 +266,9 @@ import RxSwift
 	    }
 	    
 	    @discardableResult
-	    func getCurrencyQuotes<M1: Cuckoo.Matchable>(_ currency: M1) -> Cuckoo.__DoNotUse<(String), Observable<QuotesResponse>> where M1.MatchedType == String {
-	        let matchers: [Cuckoo.ParameterMatcher<(String)>] = [wrap(matchable: currency) { $0 }]
-	        return cuckoo_manager.verify("getCurrencyQuotes(_: String) -> Observable<QuotesResponse>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
+	    func getCurrencyQuotes() -> Cuckoo.__DoNotUse<(), Observable<QuotesResponse>> {
+	        let matchers: [Cuckoo.ParameterMatcher<Void>] = []
+	        return cuckoo_manager.verify("getCurrencyQuotes() -> Observable<QuotesResponse>", callMatcher: callMatcher, parameterMatchers: matchers, sourceLocation: sourceLocation)
 	    }
 	    
 	}
@@ -294,14 +294,14 @@ import RxSwift
         return DefaultValueRegistry.defaultValue(for: (Observable<SupportedCurrenciesResponse>).self)
     }
     
-     override func getCurrencyQuotes(_ currency: String) -> Observable<QuotesResponse>  {
+     override func getCurrencyQuotes() -> Observable<QuotesResponse>  {
         return DefaultValueRegistry.defaultValue(for: (Observable<QuotesResponse>).self)
     }
     
 }
 
 
-// MARK: - Mocks generated from file: Currency Con/Networking/NetworkingClient.swift at 2020-08-30 17:10:18 +0000
+// MARK: - Mocks generated from file: Currency Con/Networking/NetworkingClient.swift at 2020-08-30 19:40:41 +0000
 
 //
 //  NetworkingClient.swift
@@ -501,7 +501,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: Currency Con/Storage/CurrencyStorage.swift at 2020-08-30 17:10:18 +0000
+// MARK: - Mocks generated from file: Currency Con/Storage/CurrencyStorage.swift at 2020-08-30 19:40:41 +0000
 
 //
 //  CurrencyStorage.swift
@@ -878,7 +878,7 @@ import Foundation
 }
 
 
-// MARK: - Mocks generated from file: Currency Con/UI/Base/BasePresenter.swift at 2020-08-30 17:10:18 +0000
+// MARK: - Mocks generated from file: Currency Con/UI/Base/BasePresenter.swift at 2020-08-30 19:40:41 +0000
 
 //
 //  BasePresenter.swift
@@ -987,7 +987,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: Currency Con/UI/Base/BaseViewController.swift at 2020-08-30 17:10:18 +0000
+// MARK: - Mocks generated from file: Currency Con/UI/Base/BaseViewController.swift at 2020-08-30 19:40:41 +0000
 
 //
 //  BaseViewController.swift
@@ -1064,7 +1064,7 @@ import UIKit
 }
 
 
-// MARK: - Mocks generated from file: Currency Con/UI/Home/HomePresenter.swift at 2020-08-30 17:10:18 +0000
+// MARK: - Mocks generated from file: Currency Con/UI/Home/HomePresenter.swift at 2020-08-30 19:40:41 +0000
 
 //
 //  HomePresenter.swift
@@ -1399,7 +1399,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: Currency Con/Usecase/CurrencyUsecase.swift at 2020-08-30 17:10:18 +0000
+// MARK: - Mocks generated from file: Currency Con/Usecase/CurrencyUsecase.swift at 2020-08-30 19:40:41 +0000
 
 //
 //  CurrencyUsecase.swift
