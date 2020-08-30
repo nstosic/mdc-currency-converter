@@ -15,6 +15,9 @@ class HomeTest: XCTestCase {
         guard let langCode = currentLocale.languageCode else {
             return nil
         }
+        if langCode != "en" && langCode != "ja" {
+            return ("en", "en-US")
+        }
         var localeCode = langCode
         if let scriptCode = currentLocale.scriptCode {
             localeCode = "\(langCode)-\(scriptCode)"
