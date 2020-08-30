@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Currency Con
+
+  Created by Nemanja Stosic on 29/08/2020.
+  Copyright © 2020 No Scope Code. All rights reserved.
+*/
+
+"selectFromCurrency" = "通貨を選択";
+"quotes" = "現在のレート";
+"error" = "問題";
+"loadCurrenciesFailed" = "通貨を取得できませんでした。 たぶん、無料アカウントの毎月の制限に達しています。";
+"loadQuotesFailed" = "見積もりを取得できませんでした。 たぶん、無料アカウントの毎月の制限に達しています。";
